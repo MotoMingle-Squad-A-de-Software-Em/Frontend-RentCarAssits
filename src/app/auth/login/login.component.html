@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-header class="mat-header">
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+      <mat-card-title>Log In</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>User</mat-label>
+          <input matInput placeholder="Enter your username">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Sign in</button>
+      </form>
+      <hr/>
+    </mat-card-content>
+    <mat-card-actions>
+      <p>Don't have an account? <a routerLink="/register" class="register-link">Register</a></p>
+    </mat-card-actions>
+  </mat-card>
+</div>
