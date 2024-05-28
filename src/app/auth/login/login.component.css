@@ -1,0 +1,54 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para el logo y el título */
+.mat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px; /* Ajusta esto según el tamaño deseado */
+  margin-bottom: 20px;
+}
+
+mat-card {
+  width: 350px;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  width: 100%;
+  margin-top: 10px; /* Opcional: para dar un poco más de espacio si es necesario */
+}
+
+button {
+  width: 100%;
+  margin-bottom: 100px;
+}
+button:hover {
+  background-color: #1EA0FF;
+  cursor: pointer;
+}
+
+.register-link {
+  color: #1EA0FF; /* Reemplaza HEX_COLOR con el código de color real del logo */
+  text-decoration: none; /* Opcional: quita el subrayado del enlace */
+}
+
+.register-link:hover {
+  text-decoration: underline; /* Opcional: añade un subrayado al pasar el mouse para mejor indicación de que es un enlace */
+}

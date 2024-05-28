@@ -1,0 +1,90 @@
+/* Estilos para centrar el formulario en la página */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos generales para la tarjeta de material */
+mat-card {
+  width: 350px; /* Ancho fijo para todas las tarjetas para mantener consistencia */
+  margin: 20px auto; /* Asegura que la tarjeta se centre en el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+}
+
+.mat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilos para los campos de formulario */
+mat-form-field, .file-input {
+  width: 100%;        /* Asegura que los campos ocupen la anchura completa del card */
+  margin-bottom: 4px; /* Espaciado uniforme */
+}
+
+/* Estilos específicos para la entrada de archivos sin mat-form-field */
+.file-label {
+  display: block;
+  margin-bottom: 10px; /* Ajusta el margen según sea necesario */
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+
+.custom-file-input {
+  width: calc(100% - 20px); /* Ajusta el ancho para compensar el padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-file-input:hover {
+  border-color: #1EA0FF; /* Cambia el color del borde al pasar el mouse */
+}
+
+/* Estilos para los botones */
+button {
+  width: 100%; /* Botón ocupa toda la anchura de la tarjeta */
+  margin-top: 16px;
+  margin-bottom: 60px; /* Espacio antes del botón */
+}
+
+button:hover {
+  background-color: #1EA0FF; /* Color cuando el mouse pasa sobre el botón */
+  cursor: pointer; /* Cursor en forma de puntero para indicar acción */
+}
+
+/* Estilos para enlaces de acción como "iniciar sesión" en la parte inferior */
+mat-card-actions {
+  display: flex;
+  justify-content: center; /* Centra el contenido de las acciones en la tarjeta */
+  width: 100%;
+}
+
+/* Estilos para enlaces, como el link de registro */
+a {
+  color: #1EA0FF; /* Color del enlace para mantener la consistencia con el botón */
+  text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse para mejorar la accesibilidad */
+}
+
+.register-link {
+  color: #1EA0FF; /* Reemplaza HEX_COLOR con el código de color real del logo */
+  text-decoration: none; /* Opcional: quita el subrayado del enlace */
+}
+
+.register-link:hover {
+  text-decoration: underline; /* Opcional: añade un subrayado al pasar el mouse para mejor indicación de que es un enlace */
+}
