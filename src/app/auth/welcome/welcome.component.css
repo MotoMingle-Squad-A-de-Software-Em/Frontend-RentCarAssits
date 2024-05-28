@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el texto */
+}
+
+.logo {
+  height: 50px; /* Ajusta según el tamaño deseado para tu logo */
+  margin-right: 10px; /* Añade espacio entre el logo y el texto */
+}
+
+.logo-title {
+  font-size: 24px; /* Tamaño del texto */
+  font-weight: bold; /* Hace el texto negrita */
+  color: #333; /* Color del texto, ajusta según tu esquema de colores */
+}
+
+.login-button {
+  background-color: #007BFF; /* Añade color al botón Log In */
+  color: white;
+  padding: 10px 20px; /* Ajusta el padding para un mejor ajuste */
+  border-radius: 4px; /* Redondea las esquinas del botón */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Oscurece el botón cuando el mouse está sobre él */
+}
+
+.welcome-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.cars-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  width: 200px; /* Ajusta según necesidades */
+  margin: 10px;
+}
+
+.reasons-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.reason-card {
+  width: 200px; /* Ajusta según necesidades */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-icon {
+  font-size: 48px; /* Tamaño del ícono */
+}

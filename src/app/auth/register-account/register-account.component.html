@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header class="mat-header">
+      <mat-card-title>Register</mat-card-title>
+      <p class="description">Account information</p>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <!-- Campo para usuario -->
+        <mat-form-field appearance="fill">
+          <mat-label>User</mat-label>
+          <input matInput placeholder="Write your username">
+        </mat-form-field>
+
+        <!-- Campo para dirección de correo -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email address</mat-label>
+          <input matInput placeholder="Write your email address">
+        </mat-form-field>
+
+        <!-- Campo para contraseña -->
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Write your password">
+        </mat-form-field>
+
+        <!-- Campo para repetir contraseña -->
+        <mat-form-field appearance="fill">
+          <mat-label>Repeat Password</mat-label>
+          <input matInput placeholder="Type your password back">
+        </mat-form-field>
+        <!-- Botón para enviar el formulario -->
+        <button mat-raised-button color="primary">Sign up</button>
+      </form>
+      <hr/>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- Enlace para cambiar al formulario de inicio de sesión si el usuario ya tiene una cuenta -->
+      <p>Already have an account? <a routerLink="/login">Log in to your account</a></p>
+    </mat-card-actions>
+  </mat-card>
+</div>
