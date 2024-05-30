@@ -1,18 +1,31 @@
+.car-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 .car-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 300px;
+  width: 750px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
 }
 
 .car-card-header {
   position: relative;
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .car-card-header img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .favorite-icon {
@@ -24,7 +37,15 @@
 }
 
 .car-card-body {
+  display: flex;
+  justify-content: space-between;
   padding: 16px;
+  width: 100%;
+}
+
+.car-info {
+  flex-grow: 1;
+  padding-right: 16px;
 }
 
 .car-card-body h3 {
@@ -34,12 +55,16 @@
 
 .car-details {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
 }
 
 .location {
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
 }
 
 .features {
@@ -50,14 +75,17 @@
 
 .features li {
   margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .car-card-footer {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-  border-top: 1px solid #ddd;
+  text-align: right;
+  border-left: 1px solid #000;
+  padding-left: 10px;
 }
 
 .price {
@@ -66,6 +94,7 @@
 }
 
 .price small {
+  display: block;
   font-size: 0.8em;
   color: #666;
 }
@@ -77,6 +106,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .see-offer:hover {
