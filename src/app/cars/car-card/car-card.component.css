@@ -3,13 +3,16 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  max-width: 100vw; /* Establece el ancho máximo del contenedor al ancho de la ventana */
+  overflow: hidden; /* Oculta cualquier contenido que sobrepase el ancho de la ventana */
 }
 
 .car-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 750px;
+  max-width: 750px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin: 20px;
