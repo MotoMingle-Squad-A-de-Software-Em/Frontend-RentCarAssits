@@ -8,6 +8,10 @@ import {CarDataService} from "./cars/car-data/car-data.component";
 import {HttpClientModule} from "@angular/common/http";
 import {CarCardComponent} from "./cars/car-card/car-card.component";
 import {SidebarComponent} from "./navigation/sidebar/sidebar.component";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,8 +23,10 @@ import {SidebarComponent} from "./navigation/sidebar/sidebar.component";
     AppRoutingModule,
     CarCardComponent,
     SidebarComponent,
+    MatButtonModule,
+    MatCardModule
   ],
-  providers: [CarDataService],
+  providers: [CarDataService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule {
