@@ -1,10 +1,10 @@
-<div class="car-card">
+<div *ngFor="let car of carData" class="car-card">
   <div class="car-card-header">
-    <img src="assets/kia-picanto.jpg" alt="Kia Picanto">
+    <img src="assets/images/logo.jpg" alt="Kia Picanto">
     <div class="favorite-icon">❤️</div>
   </div>
   <div class="car-card-body">
-    <h3>Kia Picanto</h3>
+    <h3>{{ car.Name }}</h3>
     <div class="car-details">
       <span>👤 5</span>
       <span>📦</span>
@@ -14,9 +14,9 @@
       <span>📍 28 de Julio Avenue, Lima</span>
     </div>
     <ul class="features">
-      <li>Accident insurance</li>
-      <li>Theft insurance</li>
-      <li>Deep cleaning</li>
+      <li>Created On: {{ car.CreatedOn }}</li>
+      <li>Date Available To Public: {{ car.DateAvailableToPublic }}</li>
+      <li>Updated On: {{ car.UpdatedOn }}</li>
     </ul>
   </div>
   <div class="car-card-footer">
