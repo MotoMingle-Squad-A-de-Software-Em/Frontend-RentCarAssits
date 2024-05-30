@@ -10,7 +10,6 @@
   border-radius: 8px;
   overflow: hidden;
   width: 750px;
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: row;
   margin: 20px;
@@ -109,6 +108,10 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.mat-button{
+  color: white !important;
 }
 
 .see-offer:hover {

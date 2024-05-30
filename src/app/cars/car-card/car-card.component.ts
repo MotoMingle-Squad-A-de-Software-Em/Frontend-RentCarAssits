@@ -1,12 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {CarDataService} from "../car-data/car-data.component";
 import {NgForOf} from "@angular/common";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-car-card',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    MatButton
   ],
   templateUrl: './car-card.component.html',
   styleUrl: './car-card.component.css'
