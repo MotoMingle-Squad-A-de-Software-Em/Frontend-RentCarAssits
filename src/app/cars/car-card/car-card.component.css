@@ -1,0 +1,84 @@
+.car-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.car-card-header {
+  position: relative;
+}
+
+.car-card-header img {
+  width: 100%;
+  height: auto;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+}
+
+.car-card-body {
+  padding: 16px;
+}
+
+.car-card-body h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.location {
+  margin-bottom: 10px;
+}
+
+.features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin-bottom: 5px;
+}
+
+.car-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.price {
+  font-size: 1.4em;
+  color: #333;
+}
+
+.price small {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.see-offer {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-offer:hover {
+  background-color: #0056b3;
+}
