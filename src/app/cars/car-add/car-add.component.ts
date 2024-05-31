@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {MatFormField} from "@angular/material/form-field";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {MatInput} from "@angular/material/input";
 import {NgForOf} from "@angular/common";
@@ -16,7 +16,8 @@ import {MatButton} from "@angular/material/button";
     ReactiveFormsModule,
     MatInput,
     NgForOf,
-    MatButton
+    MatButton,
+    MatLabel
   ],
   templateUrl: './car-add.component.html',
   styleUrl: './car-add.component.css'

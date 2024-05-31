@@ -1,79 +1,75 @@
-<div class="add-car-dialog">
-  <h2>Add new car</h2>
-  <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Brand</mat-label>
-        <mat-select formControlName="brand">
-          <mat-option *ngFor="let brand of brands" [value]="brand">{{ brand }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Year</mat-label>
-        <input matInput formControlName="year" placeholder="Enter the year">
-      </mat-form-field>
-    </div>
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Model</mat-label>
-        <mat-select formControlName="model">
-          <mat-option *ngFor="let model of models" [value]="model">{{ model }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Mileage</mat-label>
-        <input matInput formControlName="mileage" placeholder="Enter the mileage of the car">
-      </mat-form-field>
-    </div>
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Category</mat-label>
-        <mat-select formControlName="category">
-          <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Value in soles</mat-label>
-        <input matInput formControlName="value" placeholder="Enter the value of the car">
-      </mat-form-field>
-    </div>
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Mechanical conditions</mat-label>
-        <mat-select formControlName="mechanicalConditions">
-          <mat-option *ngFor="let condition of conditions" [value]="condition">{{ condition }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="address" placeholder="Enter the address">
-      </mat-form-field>
-    </div>
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Transmission type</mat-label>
-        <mat-select formControlName="transmission">
-          <mat-option *ngFor="let type of transmissions" [value]="type">{{ type }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Image URL of the car</mat-label>
-        <input matInput formControlName="imageUrl" placeholder="Enter the image URL">
-      </mat-form-field>
-    </div>
-    <div class="form-row">
-      <mat-form-field appearance="fill">
-        <mat-label>Number of seats</mat-label>
-        <input matInput formControlName="seats" placeholder="Enter the number of seats">
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Extra information</mat-label>
-        <input matInput formControlName="extraInfo" placeholder="Enter extra information">
-      </mat-form-field>
-    </div>
-    <div class="form-actions">
-      <button mat-button type="button" (click)="onCancel()">Cancel</button>
-      <button mat-raised-button color="primary" type="submit">Save</button>
-    </div>
+<div class="car-form-container">
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Brand</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let brand of brands" [value]="brand">{{brand}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Model</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let model of models" [value]="model">{{model}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mechanical conditions</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let condition of conditions" [value]="condition">{{condition}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" placeholder="Enter the year">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mileage</mat-label>
+      <input matInput type="number" placeholder="Enter the mileage of the car">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Value in soles</mat-label>
+      <input matInput type="number" placeholder="Enter the value of the car">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Enter the address">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL of the car</mat-label>
+      <input matInput placeholder="Enter the image URL of the car">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Transmission type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let transmission of transmissions" [value]="transmission">{{transmission}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Number of seats</mat-label>
+      <input matInput type="number" placeholder="Enter the number of seats">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Extra information</mat-label>
+      <textarea matInput placeholder="Enter extra information"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Add Car</button>
   </form>
 </div>
