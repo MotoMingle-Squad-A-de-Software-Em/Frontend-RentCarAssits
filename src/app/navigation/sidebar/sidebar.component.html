@@ -5,13 +5,13 @@
   </div>
   <nav class="menu">
     <ul>
-      <li>
-        <a href="#">
+      <li [class.active]="isSearchActive">
+        <a [routerLink]="['/home']">
           <mat-icon>search</mat-icon>&nbsp; Search cars
         </a>
       </li>
-      <li class="active">
-        <a href="#">
+      <li [class.active]="isMyCarsActive">
+        <a [routerLink]="['/mycars']">
           <mat-icon>directions_car</mat-icon>&nbsp; My cars
         </a>
       </li>
