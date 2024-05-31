@@ -11,6 +11,7 @@ import {SidebarComponent} from "./navigation/sidebar/sidebar.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatCardModule} from '@angular/material/card';
     CarCardComponent,
     SidebarComponent,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [CarDataService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
