@@ -2,7 +2,11 @@
   <div *ngFor="let car of carData" class="car-card mat-elevation-z2">
     <div class="car-card-header">
       <img src="assets/images/logo.jpg" alt="Kia Picanto">
-      <div class="favorite-icon">❤️</div>
+      <div class="favorite">
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
     </div>
     <div class="car-card-body">
       <div class="car-info">
@@ -25,7 +29,7 @@
         <div class="price">
           <span>S/. 80</span> <small>Per day</small>
         </div>
-        <button mat-button class="see-offer">See offer</button>
+        <button mat-raised-button color="primary">Add Car</button>
       </div>
     </div>
   </div>

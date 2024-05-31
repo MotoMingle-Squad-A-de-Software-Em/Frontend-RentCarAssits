@@ -30,12 +30,10 @@
   object-fit: cover;
 }
 
-.favorite-icon {
+.favorite {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
-  color: red;
 }
 
 .car-card-body {
@@ -120,3 +118,7 @@ button.mat-button.see-offer {
 .see-offer:hover {
   background-color: #0056b3;
 }
+.mat-button-custom{
+  color: white;
+}
+
