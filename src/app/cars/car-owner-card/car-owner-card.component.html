@@ -1,0 +1,53 @@
+<div class="car-cards-container">
+  <div *ngFor="let car of carData" class="car-card mat-elevation-z2">
+    <div class="car-card-header">
+      <img src="assets/images/logo.jpg" alt="Kia Picanto">
+      <div class="favorite">
+        <button mat-icon-button color="warn">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="car-card-body">
+      <div class="car-info">
+        <h3>{{ car.Name }}</h3>
+        <div class="car-details">
+          <span>👤 5</span>
+          <span>📦</span>
+          <span>🚗 M</span>
+        </div>
+        <div class="location">
+          <span>📍 28 de Julio Avenue, Lima</span>
+        </div>
+        <ul class="features">
+          <li>Created On: {{ car.CreatedOn }}</li>
+          <li>Date Available To Public: {{ car.DateAvailableToPublic }}</li>
+          <li>Updated On: {{ car.UpdatedOn }}</li>
+        </ul>
+      </div>
+      <div class="car-card-footer">
+        <div class="icons">
+          <div class="edit">
+            <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+          <div class="visibility_off">
+            <button mat-icon-button color="primary">
+              <mat-icon>visibility_off</mat-icon>
+            </button>
+          </div>
+          <div class="delete">
+            <button mat-icon-button color="primary">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="price">
+          <span>S/. 80</span> <small>Per day</small>
+        </div>
+        <button mat-raised-button color="primary">Add Car</button>
+      </div>
+    </div>
+  </div>
+</div>
