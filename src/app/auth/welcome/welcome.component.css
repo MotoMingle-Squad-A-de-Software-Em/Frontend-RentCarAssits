@@ -1,68 +1,79 @@
+.welcome-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
 }
 
 .logo-container {
   display: flex;
-  align-items: center; /* Alinea verticalmente el logo y el texto */
+  align-items: center; /* Asegura que el logo y el texto estén alineados verticalmente */
 }
 
 .logo {
-  height: 50px; /* Ajusta según el tamaño deseado para tu logo */
-  margin-right: 10px; /* Añade espacio entre el logo y el texto */
+  height: 90px;
+  margin-right: 10px;
 }
 
 .logo-title {
-  font-size: 24px; /* Tamaño del texto */
-  font-weight: bold; /* Hace el texto negrita */
-  color: #333; /* Color del texto, ajusta según tu esquema de colores */
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
 }
 
 .login-button {
-  background-color: #007BFF; /* Añade color al botón Log In */
-  color: white;
-  padding: 10px 20px; /* Ajusta el padding para un mejor ajuste */
-  border-radius: 4px; /* Redondea las esquinas del botón */
+  margin-left: auto;
+}
+button:hover {
+  background-color: #1EA0FF;
+  cursor: pointer;
 }
 
-.login-button:hover {
-  background-color: #0056b3; /* Oscurece el botón cuando el mouse está sobre él */
-}
-
-.welcome-container {
+.main-content {
   text-align: center;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .cars-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .car-card {
-  width: 200px; /* Ajusta según necesidades */
-  margin: 10px;
+  width: 220px; /* Ajusta el ancho según sea necesario */
+  background-color: #ffffff; /* Fondo blanco para la tarjeta */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto al centro */
+  margin: 10px; /* Espaciado alrededor de la tarjeta */
 }
 
 .reasons-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  text-align: left;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .reason-card {
-  width: 200px; /* Ajusta según necesidades */
+  width: calc(25% - 20px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
   margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  background-color: #fff;
 }
 
 mat-icon {
-  font-size: 48px; /* Tamaño del ícono */
+  color: #007BFF;
 }

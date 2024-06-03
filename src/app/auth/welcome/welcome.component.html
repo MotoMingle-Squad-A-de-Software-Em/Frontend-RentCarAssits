@@ -1,30 +1,32 @@
-<div class="header">
-  <div class="logo-container">
-    <img src="assets/images/logo.png" alt="RentCarAssits Logo" class="logo">
-    <span class="logo-title">RentCarAssits</span>
-  </div>
-  <button mat-button class="login-button">Log In</button>
-</div>
-
 <div class="welcome-container">
-  <h1>This year it travels all over Peru</h1>
-  <button mat-raised-button color="primary">View all</button>
+  <!-- Header con logo y botón Log In -->
+  <div class="header">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+      <span class="logo-title">RentCarAssits</span>
+    </div>
+    <button mat-raised-button color="primary" routerLink="/login">Log In</button>
+  </div>
 
-  <!-- Sección de tarjetas de vehículos -->
+  <!-- Título principal y botón para ver todos los vehículos -->
+  <div class="main-content">
+    <h1>This year it travels all over Peru</h1>
+    <button mat-raised-button color="primary">View all</button>
+  </div>
+
+  <!-- Sección de vehículos disponibles -->
   <div class="cars-container">
-    <mat-card class="car-card" *ngFor="let car of cars"> <!-- Asumiendo que tienes una lista de autos en tu componente TS -->
-      <img mat-card-image src="{{car.image}}" alt="Car Image">
-      <mat-card-content>
-        <p>{{car.name}}</p>
-        <p>{{car.price}}</p>
-      </mat-card-content>
-    </mat-card>
+    <div class="car-card" *ngFor="let car of cars">
+      <img src="{{car.image}}" alt="Car">
+      <p>{{car.model}}</p>
+      <p>{{car.price}}</p>
+    </div>
   </div>
 
   <!-- Sección de razones para elegir el servicio -->
   <h2>These are the reasons why people choose RentCarAssits</h2>
   <div class="reasons-container">
-    <div class="reason-card" *ngFor="let reason of reasons"> <!-- Asumiendo que tienes una lista de razones en tu componente TS -->
+    <div class="reason-card" *ngFor="let reason of reasons">
       <mat-icon>{{reason.icon}}</mat-icon>
       <h3>{{reason.title}}</h3>
       <p>{{reason.description}}</p>

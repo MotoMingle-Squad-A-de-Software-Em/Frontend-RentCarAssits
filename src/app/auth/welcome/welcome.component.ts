@@ -7,16 +7,30 @@ import { Component } from '@angular/core';
 })
 export class WelcomeComponent {
   cars = [
-    { name: 'Kia Picanto', price: 'S/.70', image: 'path_to_image' },
-    { name: 'Kia Picanto', price: 'S/.70', image: 'path_to_image' },
-    { name: 'Kia Picanto', price: 'S/.70', image: 'path_to_image' },
-    { name: 'Kia Picanto', price: 'S/.70', image: 'path_to_image' },
-    // otros autos
+    { image: 'assets/images/car.jpg', model: 'Kia Picanto', price: 'S/.70' },
+    { image: 'assets/images/car.jpg', model: 'Kia Picanto', price: 'S/.70' },
+    { image: 'assets/images/car.jpg', model: 'Kia Picanto', price: 'S/.70' },
+    { image: 'assets/images/car.jpg', model: 'Kia Picanto', price: 'S/.70' },
+    // Otros coches...
   ];
 
   reasons = [
-    { icon: 'security', title: 'Health security', description: 'You will be able to request a complete sanitizing and disinfection service before receiving the car.' },
-    // otras razones
+    { icon: 'security', title: 'Health Security', description: 'You will be able to request a complete sanitizing before receiving the car.' },
+    {
+      icon: 'directions_car',
+      title: 'Rental facility',
+      description: 'For your convenience, you can request home delivery and pick-up service.'
+    },
+    {
+      icon: 'attach_money',
+      title: 'Generate profits',
+      description: 'You can earn money from the comfort of your home if you publish your car on our platform.'
+    },
+    {
+      icon: 'analytics',
+      title: 'Statistics',
+      description: 'You will be able to access statistics of your car and its rental if you subscribe to our premium version.'
+    }
   ];
 
   constructor() {
