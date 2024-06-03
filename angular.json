@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Frontend-RentCarAssits/",
               "budgets": [
                 {
                   "type": "initial",
