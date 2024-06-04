@@ -1,0 +1,50 @@
+<div class="sidebar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="RentCarAssists">
+    <span>RentCarAssists</span>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li [class.active]="isSearchActive">
+        <a [routerLink]="['/home']">
+          <mat-icon>search</mat-icon>&nbsp; Search cars
+        </a>
+      </li>
+      <li [class.active]="isMyCarsActive">
+        <a [routerLink]="['/mycars']">
+          <mat-icon>directions_car</mat-icon>&nbsp; My cars
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>favorite</mat-icon>&nbsp; My favorites
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>car_rental</mat-icon>&nbsp; My rents
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>calendar_month</mat-icon>&nbsp; My reservations
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>engineering</mat-icon>&nbsp; My maintenance
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>show_chart</mat-icon>&nbsp; Statistics
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>settings</mat-icon>&nbsp; Configuration
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

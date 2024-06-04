@@ -14,7 +14,7 @@
           <mat-label>Password</mat-label>
           <input matInput type="password" placeholder="Enter your password">
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit" (click)="closeDialog()">Sign in</button>
+        <button mat-raised-button color="primary" type="submit" [routerLink]="['/home']" (click)="closeDialog()">Sign in</button>
       </form>
       <hr/>
     </mat-card-content>

@@ -30,7 +30,9 @@
           <input matInput placeholder="Type your password back">
         </mat-form-field>
         <!-- Botón para enviar el formulario -->
-        <button mat-raised-button color="primary">Sign up</button>
+        <a [routerLink]="['/home']">
+          <button mat-raised-button color="primary" type="submit">Sign in</button>
+        </a>
       </form>
       <hr/>
     </mat-card-content>

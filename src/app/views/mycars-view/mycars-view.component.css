@@ -1,0 +1,14 @@
+.app-container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.add-button {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+}
