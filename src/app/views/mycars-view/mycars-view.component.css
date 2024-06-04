@@ -1,14 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
 .app-container {
   display: flex;
+  height: 100vh;
+}
+
+app-sidebar {
+  width: 200px;
+  height: 100%;
+  background-color: #f4f4f4;
+  position: fixed;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 200px;
+  width: calc(100% - 200px);
+}
+
+app-navbar {
+  width: 100%;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 291px;
+  height: 79px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .content {
-  flex: 1;
-  padding: 20px;
+  flex-grow: 1;
+  padding: 80px 20px 20px 20px;
+  margin-top: 60px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
 }
 
 .add-button {
   position: fixed;
   top: 10%;
   right: 10%;
+  z-index: 2;
+}
+
+app-car-owner-card {
+  width: 100%;
+  max-width: calc(100% - 290px);
+  margin: 0 0 20px 200px;
+  display: block;
 }

@@ -1,7 +1,10 @@
 <div class="app-container">
   <app-sidebar></app-sidebar>
-  <div class="content">
-    <app-car-owner-card></app-car-owner-card>
+  <div class="main-section">
+    <app-navbar></app-navbar>
+    <div class="content">
+      <app-car-owner-card></app-car-owner-card>
+    </div>
   </div>
   <button mat-raised-button color="primary" class="add-button" (click)="openDialog()">Add New Car</button>
 </div>
