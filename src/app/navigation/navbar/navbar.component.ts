@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 
 @Component({
@@ -7,7 +7,8 @@ import {MatIcon} from "@angular/material/icon";
   standalone: true,
   imports: [
     MatButton,
-    MatIcon
+    MatIcon,
+    MatIconButton
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
