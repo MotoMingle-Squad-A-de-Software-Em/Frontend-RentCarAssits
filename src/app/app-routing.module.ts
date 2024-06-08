@@ -7,6 +7,7 @@ import {WelcomeComponent} from "./auth/welcome/welcome.component";
 import {CarCardComponent} from "./cars/car-card/car-card.component";
 import {HomeViewComponent} from "./views/home-view/home-view.component";
 import {MycarsViewComponent} from "./views/mycars-view/mycars-view.component";
+import {RentcarViewComponent} from "./views/rentcar-view/rentcar-view.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'car-card', component: CarCardComponent, pathMatch: 'full' },
   { path: 'home', component: HomeViewComponent, pathMatch: 'full' },
   { path: 'mycars', component: MycarsViewComponent, pathMatch: 'full' },
+  { path: 'rentcar', component: RentcarViewComponent, pathMatch: 'full' },
 ]
 
 @NgModule({
