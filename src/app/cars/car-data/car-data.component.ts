@@ -19,6 +19,16 @@ export class CarDataService {
   }
 
   addCar(carData: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, carData);
+    const body = {
+      model: carData.model,
+      brand: carData.brand,
+      address: carData.address,
+      seats: carData.seats,
+      stars: carData.stars,
+      features: carData.features,
+      price: carData.price,
+      vehiclePicture: carData.vehiclePicture
+    };
+    return this.http.post<any>(this.apiUrl, body);
   }
 }
