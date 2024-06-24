@@ -14,7 +14,7 @@ import {MatIcon} from "@angular/material/icon";
     MatIconButton
   ],
   templateUrl: './car-card.component.html',
-  styleUrl: './car-card.component.css'
+  styleUrls: ['./car-card.component.css']
 })
 export class CarCardComponent implements OnInit {
 
@@ -24,7 +24,10 @@ export class CarCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.carDataService.getCarData().subscribe(data => {
-      this.carData = data.Results;
+      this.carData = data;
+      console.log('Datos de los vehículos:', this.carData);
+    }, error => {
+      console.error('Error al obtener datos:', error);
     });
   }
 }
