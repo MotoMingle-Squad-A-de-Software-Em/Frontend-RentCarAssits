@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {NgForOf} from "@angular/common";
 import {CarDataService} from "../car-data/car-data.component";
@@ -14,9 +14,9 @@ import {MatIcon} from "@angular/material/icon";
     MatIconButton
   ],
   templateUrl: './car-owner-card.component.html',
-  styleUrl: './car-owner-card.component.css'
+  styleUrls: ['./car-owner-card.component.css']
 })
-export class CarOwnerCardComponent {
+export class CarOwnerCardComponent implements OnInit {
 
   carData: any[] = [];
 
@@ -24,7 +24,10 @@ export class CarOwnerCardComponent {
 
   ngOnInit(): void {
     this.carDataService.getCarData().subscribe(data => {
-      this.carData = data.Results;
+      this.carData = data;
+      console.log('Datos de los vehículos:', this.carData);
+    }, error => {
+      console.error('Error al obtener los datos:', error);
     });
   }
 }
