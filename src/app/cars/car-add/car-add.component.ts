@@ -1,19 +1,30 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { CarDataService } from '../car-data/car-data.component';
-import {MatFormField} from "@angular/material/form-field";
-import {MatOption, MatSelect} from "@angular/material/select";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
+import {MatOption, MatSelect, MatSelectModule} from "@angular/material/select";
+import {MatInputModule} from "@angular/material/input";
+import {CommonModule} from "@angular/common";
+import {MatOptionModule} from "@angular/material/core";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-car-add',
-  templateUrl: './car-add.component.html',
   standalone: true,
   imports: [
-    ReactiveFormsModule,
     MatFormField,
     MatSelect,
-    MatOption
+    MatLabel,
+    MatInputModule,
+    MatOption,
+    MatSelectModule,
+    ReactiveFormsModule,
+    CommonModule,
+    MatOptionModule,
+    MatButton,
   ],
+
+  templateUrl: './car-add.component.html',
   styleUrls: ['./car-add.component.css']
 })
 export class CarAddComponent {
