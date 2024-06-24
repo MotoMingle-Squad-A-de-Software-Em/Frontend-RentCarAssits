@@ -20,33 +20,30 @@ interface User {
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  users: User[] = []; // Arreglo para almacenar los usuarios obtenidos del servicio
-  errorMessage: string = ''; // Variable para manejar mensajes de error
+  users: User[] = [];
+  errorMessage: string = '';
 
   constructor(
     @Optional() public dialogRef: MatDialogRef<LoginComponent>,
     private router: Router,
     private http: HttpClient
   ) {
-    this.fetchUsers(); // Llamada al método para obtener usuarios al inicializar el componente
+    this.fetchUsers();
   }
 
   closeDialog(): void {
     if (this.dialogRef) {
-      this.dialogRef.close(); // Método para cerrar el diálogo
+      this.dialogRef.close();
     }
   }
 
   onSubmit(username: string, password: string): void {
-    // Validación simple de credenciales
     const user = this.users.find(u => u.username === username && u.password === password);
 
     if (user) {
-      // Usuario válido, redirige al home page
       this.router.navigate(['/home']);
       this.closeDialog();
     } else {
-      // Usuario no encontrado o credenciales inválidas
       this.errorMessage = 'Invalid username or password. Please try again.';
     }
   }
