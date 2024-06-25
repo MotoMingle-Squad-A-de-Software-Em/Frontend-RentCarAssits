@@ -15,22 +15,17 @@
           <mat-icon>directions_car</mat-icon>&nbsp; My cars
         </a>
       </li>
-      <li>
-        <a href="#">
-          <mat-icon>favorite</mat-icon>&nbsp; My favorites
-        </a>
-      </li>
-      <li>
+      <li [class.active]="isRentCarActive">
         <a [routerLink]="['/rentcar']">
           <mat-icon>car_rental</mat-icon>&nbsp; My rents
         </a>
       </li>
-      <li>
+      <li [class.active]="isBookingsActive">
         <a [routerLink]="['/bookings']">
           <mat-icon>calendar_month</mat-icon>&nbsp; My bookings
         </a>
       </li>
-      <li>
+      <li [class.active]="isConfigurationActive">
         <a [routerLink]="['/configuration']">
           <mat-icon>settings</mat-icon>&nbsp; Configuration
         </a>

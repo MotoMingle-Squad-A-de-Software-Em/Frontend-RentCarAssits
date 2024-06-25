@@ -13,15 +13,21 @@ import {Router, RouterLink} from '@angular/router';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent implements OnInit {
-  isMyCarsActive: boolean = false;
   isSearchActive: boolean = false;
+  isMyCarsActive: boolean = false;
+  isRentCarActive: boolean = false;
+  isBookingsActive: boolean = false;
+  isConfigurationActive: boolean = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((val) => {
-      this.isMyCarsActive = this.router.url === '/mycars';
       this.isSearchActive = this.router.url === '/home';
+      this.isMyCarsActive = this.router.url === '/mycars';
+      this.isRentCarActive = this.router.url === '/rentcar';
+      this.isBookingsActive = this.router.url === '/bookings';
+      this.isConfigurationActive = this.router.url === '/configuration';
     });
   }
 
