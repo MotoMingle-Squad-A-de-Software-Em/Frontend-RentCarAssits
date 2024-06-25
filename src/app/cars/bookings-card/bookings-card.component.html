@@ -1,0 +1,38 @@
+
+<div class="bookings-container">
+  <div *ngFor="let booking of bookings" class="booking-card">
+    <div class="details-row">
+
+      <div class="vehicle-image-container">
+        <img [src]="getVehicleDetails(booking.vehicleId)?.vehiclePicture" alt="Vehicle Image">
+      </div>
+      <div class="info-container">
+        <div class="booking-details">
+          <p><strong>Booking Date:</strong> {{ booking.bookingDate }}</p>
+          <p><strong>Return Date:</strong> {{ booking.returnDate }}</p>
+        </div>
+        <div class="vehicle-details" *ngIf="getVehicleDetails(booking.vehicleId)">
+          <h4>Vehicle Details</h4>
+          <p><strong>Brand:</strong> {{ getVehicleDetails(booking.vehicleId)?.brand }}</p>
+          <p><strong>Model:</strong> {{ getVehicleDetails(booking.vehicleId)?.model }}</p>
+          <p><strong>Seats:</strong> {{ getVehicleDetails(booking.vehicleId)?.seats }}</p>
+          <p><strong>Features:</strong> {{ getVehicleDetails(booking.vehicleId)?.features }}</p>
+          <p><strong>Price per Day:</strong> {{ getVehicleDetails(booking.vehicleId)?.price | currency }}</p>
+        </div>
+        <div class="user-details" *ngIf="getUserDetails(booking.userId)">
+          <h4>User Details</h4>
+          <p><strong>Name:</strong> {{ getUserDetails(booking.userId)?.names }}</p>
+          <p><strong>Lastname:</strong> {{ getUserDetails(booking.userId)?.lastnames }}</p>
+        </div>
+      </div>
+      <div class="price-details">
+        <div class="price-title">
+        <h4>Price</h4>
+        </div>
+        <div class="price">
+          <p>s/. {{ calculateTotalPrice(booking) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
