@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Vehicle List</h2>
+  <div *ngFor="let vehicle of vehicles" class="vehicle-card">
+    <div class="vehicle-image">
+      <img [src]="vehicle.vehiclePicture" alt="Vehicle Image">
+    </div>
+    <div class="vehicle-details">
+      <p><strong>Brand:</strong> {{ vehicle.brand }}</p>
+      <p><strong>Model:</strong> {{ vehicle.model }}</p>
+      <p><strong>Address:</strong> {{ vehicle.address }}</p>
+      <p><strong>Seats:</strong> {{ vehicle.seats }}</p>
+      <p><strong>Stars:</strong> {{ vehicle.stars }}</p>
+      <p><strong>Features:</strong> {{ vehicle.features }}</p>
+      <p><strong>Price:</strong> {{ vehicle.price }}</p>
+    </div>
+  </div>
+  <h3>Bookings:</h3>
+  <ul>
+    <li *ngFor="let booking of bookings">
+      <p><strong>Booking ID:</strong> {{ booking.id }}</p>
+      <p><strong>Booking Date:</strong> {{ booking.bookingDate }}</p>
+      <p><strong>Return Date:</strong> {{ booking.returnDate }}</p>
+      <p><strong>User:</strong> {{ booking.userId }}</p>
+    </li>
+  </ul>
+
+  <h2>User List</h2>
+  <div *ngFor="let user of users" class="user-card">
+    <div class="user-details">
+      <div class="user-image">
+        <img [src]="user.profilePicture" alt="Profile Picture">
+      </div>
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Name:</strong> {{ user.names }}</p>
+      <p><strong>Lastname:</strong> {{ user.lastnames }}</p>
+      <p><strong>DNI:</strong> {{ user.dni }}</p>
+    </div>
+  </div>
+</div>

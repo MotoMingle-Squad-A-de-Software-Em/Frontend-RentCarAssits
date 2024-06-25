@@ -18,6 +18,12 @@ export class CarDataService {
     );
   }
 
+  getDataFromUrl(url: string): Observable<any[]> {
+    return this.http.get<any>(url).pipe(
+      map(response => response.content)
+    );
+  }
+
   addCar(carData: any): Observable<any> {
     const body = {
       model: carData.model,
