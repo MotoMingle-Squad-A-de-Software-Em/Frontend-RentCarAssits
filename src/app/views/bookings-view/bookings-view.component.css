@@ -50,7 +50,7 @@ app-navbar {
   height: calc(100vh - 60px);
 }
 
-app-car-card {
+app-bookings-card {
   width: 100%;
   max-width: calc(100% - 290px);
   margin: 0 0 20px 200px;

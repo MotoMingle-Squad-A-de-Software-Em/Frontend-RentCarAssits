@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import {CurrencyPipe, NgForOf, NgIf} from "@angular/common";
+import { CurrencyPipe, NgForOf, NgIf } from "@angular/common";
 import { MatButton, MatIconButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
 
