@@ -9,6 +9,7 @@ import {HomeViewComponent} from "./views/home-view/home-view.component";
 import {MycarsViewComponent} from "./views/mycars-view/mycars-view.component";
 import {RentcarViewComponent} from "./views/rentcar-view/rentcar-view.component";
 import {BookingsViewComponent} from "./views/bookings-view/bookings-view.component";
+import {ConfigurationViewComponent} from "./views/configuration-view/configuration-view.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'mycars', component: MycarsViewComponent, pathMatch: 'full' },
   { path: 'rentcar', component: RentcarViewComponent, pathMatch: 'full' },
   { path: 'bookings', component: BookingsViewComponent, pathMatch: 'full' },
+  { path: 'configuration', component: ConfigurationViewComponent, pathMatch: 'full' },
 ]
 
 @NgModule({
